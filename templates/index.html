@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+     {% block content %}
+     <head>
+        <title>{{title}}</title>
+    </head>
+   
+    <body>
+    <h1>{{title}}</h1>
+   
+        <form method = 'POST'>
+            <input id = "username" type="text" name = "username" placeholder="username"/>
+            {{user_error}}
+            <br>
+            <input id = "password" type = "password" name="password" placeholder="password"/>
+            {{password_error}}
+            <br>
+            <input id = "verify" type = "password" name="verify" placeholder="verify password"/>
+            {{verify_error}}
+            <br>
+            <input id = "email" type ="text" name="email" placeholder="email"/>
+            {{email_error}}
+            <br>
+            <input type="submit"/>
+        </form>    
+    </body>
+    {% endblock %}
+</html>
